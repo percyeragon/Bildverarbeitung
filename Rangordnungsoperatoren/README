@@ -1,0 +1,70 @@
+Anleitung zur Entwicklung mit MiToBo
+====================================
+
+Inhalt:
+
+A) Arbeiten auf der Kommandozeile
+
+B) MiToBo-Entwicklung unter Eclipse
+
+Struktur/Inhalt des Projektverzeichnisses:
+
+.
+|-- .classpath			- Eclipse-Projekt-Konfiguration
+|-- .project			- Eclipse-Projekt-Konfiguration
+|-- .settings			- Eclipse-Projekt-Konfiguration
+|-- README			- diese Datei
+|-- compile.sh
+|-- data			- Testdaten
+|-- oprunner.sh
+|-- plugins			
+|   |-- jars			- externe Bibliotheken
+|   `-- mitobo_plugins.jar	- MiToBo Plugins
+
+|-- run.sh
+|-- setup-classpath.sh		- Helper-Skript zum Konfigurieren der Shell
+`-- src				- Source-Verzeichnis
+    |-- main
+    |   `-- java
+    |       `-- einfBV
+    |           `-- demo
+    |               `-- MiToBoDemoOperator.java
+    `-- test
+        `-- java
+            `-- einfBV
+                `-- demo
+                    `-- TestMiToBoDemoOperator.java
+
+
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+
+
+A) Arbeiten auf der Konsole
+
+Alle Source-Files muessen unter 'src/main/java' abgelegt werden. Sie koennen dort nach Belieben 
+eigene Pakete und Klassendateien anlegen. Allerdings muessen die Pakete in den Klassendateien
+korrekt deklariert werden.
+
+Als Vorlage finden Sie unter 'src/main/java' im Paket 'einfBV.demo' die Datei MiToBoDemoOperator.java.
+
+Zum Compilieren und Ausfuehren von Operatoren auf der Kommandozeile,
+fuehren Sie die folgenden Schritte aus.
+Wechseln Sie zuvor jeweils in den Ordner, in dem Sie das zip-File ausgepackt haben.
+
+A.1) Linux/Unix:
+
+- Compilieren einer Datei:
+ 
+  sh compile.sh <Datei.java> 
+
+    Beispiel: sh compile.sh src/main/java/einfBV/demo/MiToBoDemoOperator.java
+
+- Starten von ImageJ mit MiToBo:
+
+  sh run.sh
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
